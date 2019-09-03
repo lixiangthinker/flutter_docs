@@ -39,8 +39,6 @@ main[UTMPUSERID]
 
 > set-cookie: main[UTMPNUM]=79117; path=/; domain=.****.net
 
-set-cookie 字段包含了非法字符"["和"]"，导致请求失败。
-
 &emsp;&emsp;问题已经定位，请服务器兄弟吃顿烧烤，改一下 set-cookie 字符串定义，问题解决。 ^_^
 
 &emsp;&emsp;但是作为一个有追求的程序员，不能不跟踪一下根本原因。

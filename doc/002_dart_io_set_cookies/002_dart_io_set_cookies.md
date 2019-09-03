@@ -1,7 +1,7 @@
 # Flutter填坑笔记： dio报错 FormatException
 
 &emsp;&emsp;以前说到， Dart 是个年轻的语言，SDK 还不够成熟，使用中有很多坑。之前解决
-了一个使用代理导致空指针的问题，这次又碰上了一个使用 Cache 产生 FormatException 的问题。
+了一个使用代理导致空指针的问题，这次又碰上了一个使用 Cookie 产生 FormatException 的问题。
 
 ## 问题描述
 
@@ -34,7 +34,9 @@ main[UTMPUSERID]
 
 抓出服务器响应分析：
 > set-cookie: main[UTMPUSERID]=guest; path=/; domain=.****.net
+
 > set-cookie: main[UTMPKEY]=48990095; path=/; domain=.****.net
+
 > set-cookie: main[UTMPNUM]=79117; path=/; domain=.****.net
 
 set-cookie 字段包含了非法字符"["和"]"，导致请求失败。
